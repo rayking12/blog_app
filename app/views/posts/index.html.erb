@@ -1,0 +1,32 @@
+<% content_for :page_title, "Home" %>
+
+
+<section class="section">
+<div class="container">
+<% @posts.each  do |post| %>
+    <article class="media">
+    <figure class="media-left">
+    <p class="image is-64x64">
+    <%= post.author %>
+    </p>
+    </figure>
+  
+  
+    
+    <div class="media-content">
+    <div class="content">
+    <p>
+    <strong> <%= link_to post.title, post %></strong> <br/> <small>published at  <%= time_ago_in_words (post.created_at)%> </small></small> 
+    <br>
+    <%= post.content%>
+    </p>
+    </div>
+    <figure class="media-right">
+    <p class="">
+    
+    </p>
+    </figure>
+    </article>
+    <% end %> 
+    </div
+    </section>
